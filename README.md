@@ -32,3 +32,26 @@ mc-bot/
 ├── package-lock.json
 └── README.md
 ```
+
+# Refined file structure
+
+``` text
+mc-bot/
+│
+├── src/
+│   ├── index.js          # Entry point
+│   ├── createBot.js      # Bot creation logic
+│   │
+│   ├── config/
+│   │   └── env.js        # Env loader & validator
+│   │
+│   ├── plugins/          # All plugins here
+│   │   ├── antiAfk.js
+│   │   ├── autoEat.js
+│   │   └── ...
+│   │
+│   └── events/           # All bot events here
+│       ├── chat.js
+│       ├── spawn.js
+│       └── error.js
+```
