@@ -1,4 +1,5 @@
 # Planned file structure
+```
 mc-bot/
 │
 ├── src/
@@ -29,3 +30,4 @@ mc-bot/
 ├── package.json
 ├── package-lock.json
 └── README.md
+```
