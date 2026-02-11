@@ -1,0 +1,28 @@
+{
+  "name": "mc-bot",
+  "version": "0.1.0",
+  "description": "Modular Minecraft bot built with mineflayer",
+  "main": "src/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "check": "node src/index.js --check-env"
+  },
+  "keywords": [
+    "minecraft",
+    "mineflayer",
+    "bot",
+    "automation"
+  ],
+  "author": "Faizal Refendi",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^17.2.0",
+    "mineflayer": "^4.34.0"
+  },
+  "engines": {
+  "node": ">=24.13.0"
+}
+
+}
