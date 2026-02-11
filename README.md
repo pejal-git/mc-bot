@@ -1,13 +1,14 @@
 # Planned file structure
-```
+
+```text
 mc-bot/
 │
 ├── src/
 │   ├── index.js          # Entry point
-│   ├── bot.js            # Bot creation logic
+│   ├── createBot.js      # Bot creation logic
 │   │
 │   ├── config/
-│   │   └── env.js        # Loads + validates environment variables
+│   │   └── env.js        #  Validates and load environment variables
 │   │
 │   ├── plugins/
 │   │   ├── antiAfk.js
@@ -26,7 +27,7 @@ mc-bot/
 │       └── ...
 │
 ├── .env
-├── .env.example
+├── .env-example
 ├── package.json
 ├── package-lock.json
 └── README.md
