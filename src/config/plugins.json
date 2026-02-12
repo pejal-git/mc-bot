@@ -1,0 +1,27 @@
+{
+  "plugins": {
+    "antiAfk": {
+      "enabled": true,
+      "jumpInterval": 60000,
+      "jumpDuration": 500
+    }
+  },
+  "events": {
+    "chat": {
+      "enabled": true,
+      "greetMessage": "Hello, ${username}! 👋"
+    },
+    "spawn": {
+      "enabled": true
+    },
+    "error": {
+      "enabled": true
+    },
+    "disconnect": {
+      "enabled": true
+    },
+    "kicked": {
+      "enabled": true
+    }
+  }
+}
