@@ -1,4 +1,6 @@
-# Planned file structure
+# mc-bot
+
+## Planned file structure
 
 ```text
 mc-bot/
@@ -33,7 +35,7 @@ mc-bot/
 └── README.md
 ```
 
-# Refined file structure
+## Refined file structure
 
 ``` text
 mc-bot/
