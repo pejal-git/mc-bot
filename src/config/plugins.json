@@ -2,14 +2,21 @@
   "plugins": {
     "antiAfk": {
       "enabled": true,
-      "jumpInterval": 60000,
-      "jumpDuration": 500
+      "minDelay": 22000,
+      "maxDelay": 57000,
+      "minDegree": -25,
+      "maxDegree": 25
+    },
+    "tpaGuard": {
+      "enabled": true,
+      "autoDeny": true,
+      "denyMsg": "Sorry! I'm currently afk, I will get back to you when I'm online!"
     }
   },
   "events": {
     "chat": {
       "enabled": true,
-      "greetMessage": "Hello, ${username}! 👋"
+      "greetMessage": "Hello, {username}! 👋"
     },
     "spawn": {
       "enabled": true
