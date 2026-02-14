@@ -54,12 +54,12 @@ module.exports = (bot, options = {}) => {
       timeout = null;
     }
 
-    logger.log('🛡 Anti-AFK stopped.');
+    console.log('🛡 Anti-AFK stopped.');
   }
 
   bot.antiAfk = {
     start: () => {
-      console.log('🛡 Anti-AFK started')
+      console.log('🚀 Anti-AFK started')
       scheduleNext(performIdleLook)
     },
     pause: () => {
