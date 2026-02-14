@@ -23,7 +23,7 @@ function ensureConfigEntry(type, name, defaults = {}) {
 
 function createBot(config) {
   const bot = mineflayer.createBot(config)
-  console.log(`🔹 Bot created: ${config.username}`)
+  console.log(`🤖 Bot created: ${config.username}`)
 
   // ----------- Load Plugins Dynamically -----------
   const pluginsDir = path.join(__dirname, 'plugins')
