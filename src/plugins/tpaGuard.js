@@ -5,7 +5,7 @@ module.exports = (bot, options = {}) => {
 
   bot.tpaGuard = {
     start: () => {
-      console.log('🛡 TPA-Guard started')
+      console.log('🚀 TPA-Guard started')
       bot.on('message', (jsonMsg) => {
         const message = jsonMsg.toString();
         const teleportPatterns = [
