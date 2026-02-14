@@ -13,6 +13,7 @@ module.exports = (bot, options = {}) => {
         respawned = false
     } else {
     console.log(`🌟 Bot has spawned in the world!`)
+    //logger.time(`🌟 Bot has spawned in the world!`)
     if (options.welcomeMessage) bot.chat(options.welcomeMessage)
     }
   })
