@@ -27,7 +27,7 @@ function envCheckAndGetConfig() {
     }
   }
 
-  console.log('✅ Environment variables validated.')
+  console.log('⚙️ Environment variables validated.')
 
   return {
     host: process.env.MC_HOST,
