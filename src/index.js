@@ -6,7 +6,7 @@ const logger = require('./utils/logger')
 const config = envCheckAndGetConfig()
 const bot = createBot(config)
 
-// Example: start anti-AFK plugin after spawn
+// Example: start anti-AFK plugin after spawn on login
 bot.once('login', () => {
   logger.log('🔑 Bot logged in')
 
