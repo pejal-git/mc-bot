@@ -21,14 +21,14 @@ module.exports = (bot, options = {}) => {
           requester = message.split(' has requested')[0]?.trim();
         }
         if (!requester) {
-          console.warn('🛡 TPA-Guard: requester could not be parsed!');
+          console.warn('🚀 TPA-Guard: requester could not be parsed!');
           return;
         }
         if (autoDeny) {
           bot.chat('/tpdeny');
-          console.log(`🛡 TPA-Guard rejected tpa from ${requester}`);
+          console.log(`🚀 TPA-Guard rejected tpa from ${requester}`);
         } else {
-          console.log(`🛡 TPA-Guard detected tpa from ${requester}`);
+          console.log(`🚀 TPA-Guard detected tpa from ${requester}`);
         }
         bot.whisper(requester,denyMsg);
       })

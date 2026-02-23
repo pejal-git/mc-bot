@@ -54,7 +54,7 @@ module.exports = (bot, options = {}) => {
       timeout = null;
     }
 
-    console.log('🛡 Anti-AFK stopped.');
+    console.log('🚀 Anti-AFK stopped.');
   }
 
   bot.antiAfk = {
@@ -64,12 +64,12 @@ module.exports = (bot, options = {}) => {
     },
     pause: () => {
       paused = true
-      console.log('🛡 Anti-AFK paused')
+      console.log('🚀 Anti-AFK paused')
     },
     resume: () => {
       if (stopped) return
       paused = false
-      console.log('🛡 Anti-AFK resumed')
+      console.log('🚀 Anti-AFK resumed')
     }
   }
 }
