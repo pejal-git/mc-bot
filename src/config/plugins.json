@@ -16,7 +16,21 @@
   "events": {
     "chat": {
       "enabled": true,
-      "greetMessage": "Hello, {username}! 👋"
+      "caseSensitive": true,
+      "triggers": [
+        {
+          "msg": "Hi",
+          "reply": "Hello, {username}! 👋"
+        },
+        {
+          "msg": "wb",
+          "reply": "Thank you, {username} <3"
+        },
+        {
+          "msg": "bot",
+          "reply": "Yes {username}? I am alive."
+        }
+      ]
     },
     "spawn": {
       "enabled": true
@@ -28,6 +42,9 @@
       "enabled": true
     },
     "kicked": {
+      "enabled": true
+    },
+    "message": {
       "enabled": true
     }
   }
