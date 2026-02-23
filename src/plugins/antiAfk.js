@@ -29,7 +29,7 @@ module.exports = (bot, options = {}) => {
 
     const newYaw = bot.entity.yaw + getYawDelta();
     await bot.look(newYaw, bot.entity.pitch, true);
-    console.log('🛡 Anti-AFK: subtle yaw adjustment');
+    console.log('🚀 Anti-AFK: subtle yaw adjustment');
 
     // schedule next look
     scheduleNext(performIdleLook);
