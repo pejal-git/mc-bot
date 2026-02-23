@@ -1,4 +1,6 @@
 // src/plugins/antiAfk.js
+const logger = require('../utils/logger')
+
 module.exports = (bot, options = {}) => {
   let paused = false
   let stopped = false
@@ -29,7 +31,7 @@ module.exports = (bot, options = {}) => {
 
     const newYaw = bot.entity.yaw + getYawDelta();
     await bot.look(newYaw, bot.entity.pitch, true);
-    console.log('🚀 Anti-AFK: subtle yaw adjustment');
+    logger.msg('🚀[Anti-AFK] subtle yaw adjustment');
 
     // schedule next look
     scheduleNext(performIdleLook);
@@ -54,22 +56,22 @@ module.exports = (bot, options = {}) => {
       timeout = null;
     }
 
-    console.log('🚀 Anti-AFK stopped.');
+    logger.log('🚀[Anti-AFK] stopped.');
   }
 
   bot.antiAfk = {
     start: () => {
-      console.log('🚀 Anti-AFK started')
+      logger.log('🚀[Anti-AFK] started')
       scheduleNext(performIdleLook)
     },
     pause: () => {
       paused = true
-      console.log('🚀 Anti-AFK paused')
+      logger.log('🚀[Anti-AFK] paused')
     },
     resume: () => {
       if (stopped) return
       paused = false
-      console.log('🚀 Anti-AFK resumed')
+      logger.log('🚀[Anti-AFK] resumed')
     }
   }
 }

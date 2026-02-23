@@ -9,9 +9,10 @@ const bot = createBot(config)
 // Example: start anti-AFK plugin after spawn on login
 bot.once('login', () => {
   logger.log('🔑 Bot logged in')
+})
+bot.once('spawn', () => {
+  if (bot.antiAfk?.start) bot.antiAfk.start()
+  if (bot.tpaGuard?.start) bot.tpaGuard.start()
 
-  bot.on('spawn', () => {
-    if (bot.antiAfk?.start) bot.antiAfk.start()
-    if (bot.tpaGuard?.start) bot.tpaGuard.start()
-  })
+  if (bot.terminalCommand?.start) bot.terminalCommand.start()
 })

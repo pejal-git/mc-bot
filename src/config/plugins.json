@@ -11,6 +11,9 @@
       "enabled": true,
       "autoDeny": true,
       "denyMsg": "Sorry! I'm currently afk, I will get back to you when I'm online!"
+    },
+    "terminalCommand": {
+      "enabled": true
     }
   },
   "events": {

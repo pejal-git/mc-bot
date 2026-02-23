@@ -1,11 +1,13 @@
 // src/tpaGuard.js
+const logger = require('../utils/logger')
+
 module.exports = (bot, options = {}) => {
   const autoDeny = options.autoDeny || true
   const denyMsg = options.denyMsg || "Sorry! I'm not available to accept tpa right now."
 
   bot.tpaGuard = {
     start: () => {
-      console.log('🚀 TPA-Guard started')
+      logger.log('🚀[TPA-Guard] started')
       bot.on('message', (jsonMsg) => {
         const message = jsonMsg.toString();
         const teleportPatterns = [
@@ -21,14 +23,14 @@ module.exports = (bot, options = {}) => {
           requester = message.split(' has requested')[0]?.trim();
         }
         if (!requester) {
-          console.warn('🚀 TPA-Guard: requester could not be parsed!');
+          logger.warn('[TPA-Guard] requester could not be parsed!');
           return;
         }
         if (autoDeny) {
           bot.chat('/tpdeny');
-          console.log(`🚀 TPA-Guard rejected tpa from ${requester}`);
+          logger.msg(`🚀[TPA-Guard] rejected tpa from ${requester}`);
         } else {
-          console.log(`🚀 TPA-Guard detected tpa from ${requester}`);
+          logger.msg(`🚀[TPA-Guard] detected tpa from ${requester}`);
         }
         bot.whisper(requester,denyMsg);
       })
