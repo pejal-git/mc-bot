@@ -30,6 +30,10 @@ function print(message, format, prefix = '', method = 'log') {
 }
 
 module.exports = {
+  // Log message (no date or time)
+  log: (message) => {
+    console.log(message)
+  },
   // Normal message (only time)
   msg: (message) => {
     print(message, 'time')
@@ -44,6 +48,14 @@ module.exports = {
   },
   keep: (message) => {
     console.log(`Test msg to keep: ${message}`)
+  },
+  // Force full timestamp
+  fullTime: (message) => {
+    print(message, 'full')
+  },
+  // Force short timestamp
+  shortTime: (message) => {
+    print(message, 'short')
   }
 }
 
