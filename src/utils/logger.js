@@ -46,9 +46,6 @@ module.exports = {
   warn: (message) => {
     print(message, 'short', '⚠️ WARN: ', 'warn')
   },
-  keep: (message) => {
-    console.log(`Test msg to keep: ${message}`)
-  },
   // Force full timestamp
   fullTime: (message) => {
     print(message, 'full')
