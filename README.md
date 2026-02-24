@@ -1,9 +1,10 @@
 # MC-Bot
 
+![GitHub License](https://img.shields.io/github/license/pejal-git/mc-bot)
+![GitHub repo size](https://img.shields.io/github/repo-size/pejal-git/mc-bot)
+
 An [Experimental] Modular Minecraft bot built with mineflayer.  
 This is a slow-paced ongoing project without official release or support.  
-![GitHub License](https://img.shields.io/github/license/pejal-git/mc-bot)
-
 
 ## Official Mineflayer 🔗 [prismarinejs.github.io/mineflayer/](https://prismarinejs.github.io/mineflayer/)
 
