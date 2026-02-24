@@ -1,4 +1,18 @@
 // src/index.js
-const launchBot = require('./bot')
-const config = require('./config/env').envCheckAndGetConfig()
-launchBot(config)
+const createBot = require('./createBot')
+const { envCheckAndGetConfig } = require('./config/env')
+const logger = require('./utils/logger')
+
+const config = envCheckAndGetConfig()
+const bot = createBot(config)
+
+// Example: start anti-AFK plugin after spawn on login
+bot.once('login', () => {
+  logger.log('🔑 Bot logged in')
+})
+bot.once('spawn', () => {
+  if (bot.antiAfk?.start) bot.antiAfk.start()
+  if (bot.tpaGuard?.start) bot.tpaGuard.start()
+
+  if (bot.terminalCommand?.start) bot.terminalCommand.start()
+})

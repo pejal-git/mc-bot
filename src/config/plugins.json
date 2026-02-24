@@ -1,0 +1,54 @@
+{
+  "plugins": {
+    "antiAfk": {
+      "enabled": true,
+      "minDelay": 22000,
+      "maxDelay": 57000,
+      "minDegree": -25,
+      "maxDegree": 25
+    },
+    "tpaGuard": {
+      "enabled": true,
+      "autoDeny": true,
+      "denyMsg": "Sorry! I'm currently afk, I will get back to you when I'm online!"
+    },
+    "terminalCommand": {
+      "enabled": true
+    }
+  },
+  "events": {
+    "chat": {
+      "enabled": true,
+      "caseSensitive": true,
+      "triggers": [
+        {
+          "msg": "Hi",
+          "reply": "Hello, {username}! 👋"
+        },
+        {
+          "msg": "wb",
+          "reply": "Thank you, {username} <3"
+        },
+        {
+          "msg": "bot",
+          "reply": "Yes {username}? I am alive."
+        }
+      ]
+    },
+    "spawn": {
+      "enabled": true
+    },
+    "error": {
+      "enabled": true
+    },
+    "disconnect": {
+      "enabled": true
+    },
+    "kicked": {
+      "enabled": true
+    },
+    "message": {
+      "enabled": true
+    }
+  }
+}
